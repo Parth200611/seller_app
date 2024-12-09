@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".HomeActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Framelayout"
+        android:layout_above="@id/bottomnevigatiomuserhome"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnevigatiomuserhome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:menu="@menu/bottommenu"
+        app:itemIconTint="#CBC2C2"
+        app:itemTextColor="#595656"
+        app:itemRippleColor="@color/purple"
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator" />
+
+
+</RelativeLayout>
